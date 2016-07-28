@@ -71,7 +71,7 @@ public class StringToInteger {
 		String test4 = "-2147483649"; // overflow
 		System.out.println(convert(test4));
 
-		String test5 = "-123";
+		String test5 = "-1235677899";
 		System.out.println(convert(test5));
 
 	}
