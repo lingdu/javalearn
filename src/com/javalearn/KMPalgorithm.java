@@ -1,3 +1,9 @@
+/*
+ * date:20160729
+ * author:lingdu
+ * */
+
+
 package com.javalearn;
 
 public class KMPalgorithm {
