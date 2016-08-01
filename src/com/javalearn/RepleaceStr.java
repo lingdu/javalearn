@@ -8,15 +8,29 @@ public class RepleaceStr {
 		// TODO Auto-generated method stub
 		//char[] chas = str.toCharArray();
 		//char[] chaf = from.toCharArray();
-		char[] chat = to.toCharArray();
+		//char[] chat = to.toCharArray();
 		if (str.length() < from.length() 
 				|| str == null || from == null || str.equals("") || from.equals("")){
 			return str;
 		}
-		System.out.println(moveSameStr(str, from));
+		String newstr = moveSameStr(str, from);
+		System.out.println(newstr);
+		char[] chan = newstr.toCharArray();
 
 		String res = "";
 		String cur = "";
+		for (int i = 0; i < chan.length; i++){
+			if (chan[i] != 0){
+				cur = cur + String.valueOf(chan[i]);
+			}
+			if (chan[i] == 0 && (i == 0 || chan[i-1] != 0)){
+				res = res + cur + to;
+				cur = "";
+			}
+		}
+		if (!cur.equals("")){
+			res = res + cur;
+		}
 		return res;
 	}
 	
@@ -51,7 +65,9 @@ public class RepleaceStr {
 		String from = "abc";
 		String to = "bbr";
 		
-		repleaseSameStr(str, from, to);
+		String res = repleaseSameStr(str, from, to);
+		System.out.println(res);
+		
 	}
 
 }
